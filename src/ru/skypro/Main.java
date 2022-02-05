@@ -38,7 +38,7 @@ public class Main {
         }
         i = yearStart+79;
         while (i<yearLast) {
-            System.out.println(i + " " + yearLast);
+            System.out.println(i + " ");
             i +=79;
 
         }
