@@ -18,10 +18,30 @@ public class Main {
 
         System.out.println("Задача №2");
 
-        int friday = 4;
-        while (friday <= 31 ) {
-            s = friday + 7;
-            System.out.println(s);
+        for (int friday = 4 ;friday <= 31; friday = friday+7) {
+
+
+            System.out.println("Сегодня пятница " + friday + " -е число. Необходимо подготовить отчет");
         }
+        System.out.println("Задача №3");
+        int year,yearStart = 0,yearLast=0;
+        year = 2022;
+        int i = 0;
+        while (i<year - 200) {
+            yearStart = i;
+            i +=79;}
+
+        i = 0 ;
+        while (i<year+100) {
+            i +=79;
+           yearLast=i;
+        }
+        i = yearStart+79;
+        while (i<yearLast) {
+            System.out.println(i + " " + yearLast);
+            i +=79;
+
+        }
+
     }
 }
