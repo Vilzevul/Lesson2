@@ -47,6 +47,7 @@ public class Main {
            if (array[i] % 2 != 0)
            array[i] = array[i] + 1;
            System.out.print(array[i] + " ");
+
         }
 
 
