@@ -20,7 +20,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
         int maxArray = arr[arr.length - 1];
         int minArray = arr[0];
-        System.out.println("Минимальная трата за день = " + minArray +" рублей" + "\nМаксимальная трата за день = " + maxArray + " рублей");
+        System.out.println("Минимальная трата за день = " + minArray + " рублей" + "\nМаксимальная трата за день = " + maxArray + " рублей");
 
         //вариант второй
         minArray = arr[0];
