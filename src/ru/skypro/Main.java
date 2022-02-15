@@ -17,12 +17,14 @@ public class Main {
         System.out.println("Данные ФИО сотрудника для заполнения отчета - " + fullName2);
 
         //Задание №3
-        String[] s = fullName.split(" ; ");
+        String s = fullName.replace(" ","; ");
         System.out.println("Данные ФИО сотрудника для административного отдела - " + s);
 
         //Задание №4
         fullName = fullName.replace("ё", "е");
         System.out.println("Данные ФИО сотрудника - " + fullName);
+
+
 
 
     }
