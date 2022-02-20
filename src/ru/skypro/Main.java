@@ -1,5 +1,6 @@
 package ru.skypro;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class Main {
@@ -64,8 +65,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-        printYear(1000);
+        int Year = LocalDate.now().getYear();
+        printYear(Year);
         printMobile(2015, 1);
         deliveryTime(45);
         stringDuble("abbcdde");
