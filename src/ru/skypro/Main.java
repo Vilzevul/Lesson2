@@ -1,6 +1,13 @@
 package ru.skypro;
-
 public class Main {
+    public static String search(String str, Book[] kniga) {
+        for (Book i : kniga) {
+            if (i.getName().equals(str))
+            return i.toString();
+        }
+        return "Нет такой книги";
+    }
+
 
     public static void main(String[] args) {
         Author writer1 = new Author("Федор", "Достоевский");
@@ -29,6 +36,14 @@ public class Main {
         for (Book knizhka : kniga) {
             System.out.println(knizhka);
         }
+        System.out.println(kniga[0].getName());
+        for (Book search : kniga) {
+        }
+
+        System.out.println("__________________________");
+
+        System.out.println(search("Кристина", kniga));
+
 
     }
 }
