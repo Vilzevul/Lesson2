@@ -13,6 +13,9 @@ public class Main {
         Author writer1 = new Author("Федор", "Достоевский");
         Author writer2 = new Author("Александр", "Пушкин");
         Author writer3 = new Author("Стивен", "Кинг");
+        Author writer4 = new Author("Стивен", "Кинг");
+
+
 
         Book book1 = new Book("Идиот", writer1, 1985);
         Book book11 = new Book("Преступление и наказание", writer1, 1955);
@@ -44,6 +47,8 @@ public class Main {
 
         System.out.println(search("Кристина", kniga));
 
+        System.out.println(writer3.equals(book1));
+        System.out.println(book1.equals(book1));
 
     }
 }
