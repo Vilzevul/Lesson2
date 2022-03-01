@@ -17,14 +17,19 @@ public class Main<arr> {
         employee[8] = new Employee("Кристина", "Олеговна", "Вишневская", 2, 46_258.2);
         employee[9] = new Employee("Алексей", "Александрович", "Васильев", 1, 55_679.43);
 
-        for (int i = 0; i < employee.length; i++) {
-            System.out.println(employee[i].toString());
-        }
+
         System.out.println("Сумма затрат на зарплаты составила " + summa(employee) + " рублей");
         System.out.println("Максимальная зарплата " + maxSalary(employee) + " рублей");
         System.out.println("Минимальная зарплата " + minSalary(employee) + " рублей");
         System.out.println("Средняя зарплата " + midSalary(employee) + " рублей");
         names(employee);
+        list(employee);
+    }
+
+    static void list(Employee[] employee) {
+        for (Employee a : employee) {
+            System.out.println(a);
+        }
     }
 
     static double summa(Employee[] emp) {
