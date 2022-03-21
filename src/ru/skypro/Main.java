@@ -23,14 +23,12 @@ public class Main {
         Ravenclaw padma = new Ravenclaw("Падма Патил", 11, 51, 16, 27, 36, 45);
         Ravenclaw marcus = new Ravenclaw("Маркус Белби", 3, 4, 1, 11, 11, 11);
 
-
-        potter.description();
-        justin.description();
-        justin.hogvardsDescription();
-Slytherin.compare(draco, graham);
-        Griffindor.compare(potter, hermione);
-        Hufflepuff.compare(justin, cedric);
-        Hogvards.compare(gregory, ron);
-
+        hermione.moreHonour(ron);
+        draco.moreResourseful(graham);
+        zacharias.moreDiligence(cedric);
+        chang.moreClever(padma);
+        System.out.println(hermione);
+        draco.moreMagicPower(hermione);
+        cedric.moreTransgression(justin);
     }
 }

@@ -1,68 +1,70 @@
 package ru.skypro;
 
 public class Hufflepuff extends Hogvards {
-    private int property_01;//трудолюбие
-    private int property_02;//верность
-    private int property_03;//честность
+    private int diligence;//трудолюбие
+    private int loyality;//верность
+    private int honesty;//честность
 
-    public Hufflepuff(String student, int magic, int move, int property_01, int property_02, int property_03) {
+    public Hufflepuff(String student, int magic, int move, int diligence, int loyality, int honesty) {
         super(student, magic, move);
-        this.property_01 = property_01;
-        this.property_02 = property_02;
-        this.property_03 = property_03;
+        this.diligence = diligence;
+        this.loyality = loyality;
+        this.honesty = honesty;
     }
 
-    public int getProperty_01() {
-        return property_01;
+    public int getDiligence() {
+        return diligence;
     }
 
-    public int getProperty_02() {
-        return property_02;
+    public int getLoyality() {
+        return loyality;
     }
 
-    public int getProperty_03() {
-        return property_03;
+    public int getHonesty() {
+        return honesty;
     }
 
-    public void description() {
-        hogvardsDescription();
-        System.out.println("и как студент  Hufflepuff: ");
-        System.out.println("трудолюбие: " + property_01 + "  верность: " + property_02 + "  честность: " + property_03);
-
+    @Override
+    public String toString() {
+        return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: " + getMove() + "\n" +
+                " и как студент Пуффендуй" + "\n" + " трудолюбие: " + diligence + " верность: " + loyality + " честность" + honesty);
     }
 
-    static public void compare(Hufflepuff student1, Hufflepuff student2) {
-        String str1 = null;
-        String str2 = null;
-        String str3 = null;
-        String str4 = null;
-        String str5 = null;
-        String str6 = null;
-        if (student1.getProperty_01() > student2.getProperty_01()) {
-            str1 = " !";
-            str2 = "";
+    public void moreDiligence(Hufflepuff all) {
+        if (this.getDiligence() > all.getDiligence()) {
+            System.out.println(this.getStudent() + " трудолюбивее чем " + all.getStudent());
         } else {
-            str1 = "";
-            str2 = " !";
+            if (this.getDiligence() < all.getDiligence()) {
+                System.out.println(all.getStudent() + " трудолюбивее чем " + this.getStudent());
+            } else {
+                System.out.println(all.getStudent() + " и" + this.getStudent() + " одинаково трудолюбивы");
+            }
         }
-        if (student1.getProperty_02() > student2.getProperty_02()) {
-            str3 = " !";
-            str4 = "";
-        } else {
-            str3 = "";
-            str4 = " !";
-        }
-        if (student1.getProperty_03() > student2.getProperty_03()) {
-            str5 = " !";
-            str6 = "";
-        } else {
-            str5 = "";
-            str6 = " !";
-        }
-        System.out.println("             " + student1.getStudent() + "     " + " " + student2.getStudent());
-
-        System.out.println("трудолюбие " + student1.getProperty_01() + str1 + "                 " + student2.getProperty_01() + str2);
-        System.out.println("верность   " + student1.getProperty_02() + str3 + "                 " + student2.getProperty_02() + str4);
-        System.out.println("честность    " + student1.getProperty_03() + str5 + "                 " + student2.getProperty_03() + str6);
     }
+
+    public void moreLoyality(Hufflepuff all) {
+        if (this.getLoyality() > all.getLoyality()) {
+            System.out.println(this.getStudent() + " вернее чем " + all.getStudent());
+        } else {
+            if (this.getLoyality() < all.getLoyality()) {
+                System.out.println(all.getStudent() + " вернее чем " + this.getStudent());
+            } else {
+                System.out.println(all.getStudent() + " и" + this.getStudent() + " одинаково верные");
+            }
+        }
+    }
+
+    public void moreHonesty(Hufflepuff all) {
+        if (this.getHonesty() > all.getHonesty()) {
+            System.out.println(this.getStudent() + " честнее чем " + all.getStudent());
+        } else {
+            if (this.getHonesty() < all.getHonesty()) {
+                System.out.println(all.getStudent() + " честнее чем " + this.getStudent());
+            } else {
+                System.out.println(all.getStudent() + " и" + this.getStudent() + " одинаково честные");
+            }
+
+        }
+    }
+
 }
