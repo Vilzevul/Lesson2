@@ -6,7 +6,7 @@ public class Griffindor extends Hogvards {
     private int honour;//честь
     private int bravery;//храбрость
 
-    public Griffindor(String student, int magic, int move, int nobility, int honour, int bravery) {
+    public Griffindor(String student, int magic, int move, int nobility, int honour, int bravery ) {
         super(student, magic, move);
         this.nobility = nobility;
         this.honour = honour;
@@ -27,8 +27,7 @@ public class Griffindor extends Hogvards {
 
     @Override
     public String toString() {
-        return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: "
-                + getMove() + "\n" + " и как студент Гриффиндор: " + "\n" + " благородство: " + nobility + " честь: " + honour +
+        return (toString1()+" и как студент Гриффиндор: " + "\n" + " благородство: " + nobility + " честь: " + honour +
                 " храбрость " + bravery);
     }
 

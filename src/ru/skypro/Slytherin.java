@@ -40,8 +40,7 @@ public class Slytherin extends Hogvards {
 
     @Override
     public String toString() {
-        return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: " + getMove() + "\n" +
-                " и как студент Слизерин" + "\n" + " хитрость: " + tricky + " решительность: " + determination + " амбициозность" + ambtious +
+        return (toString1() + " и как студент Слизерин" + "\n" + " хитрость: " + tricky + " решительность: " + determination + " амбициозность" + ambtious +
                 " находчивость: " + resourseful + " жажда власти: " + powerDesire);
     }
 

@@ -23,6 +23,7 @@ public class Main {
         Ravenclaw padma = new Ravenclaw("Падма Патил", 11, 51, 16, 27, 36, 45);
         Ravenclaw marcus = new Ravenclaw("Маркус Белби", 3, 4, 1, 11, 11, 11);
 
+
         hermione.moreHonour(ron);
         draco.moreResourseful(graham);
         zacharias.moreDiligence(cedric);

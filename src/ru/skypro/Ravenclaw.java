@@ -35,8 +35,7 @@ public class Ravenclaw extends Hogvards {
 
     @Override
     public String toString() {
-        return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: " + getMove() + "\n" +
-                " и как студент Когтевран" + "\n" + " ум: " + clever + " мудрость: " + wit + " остроумие: " + wisdom + " творчество: " + creative);
+        return (toString1() + " и как студент Когтевран" + "\n" + " ум: " + clever + " мудрость: " + wit + " остроумие: " + wisdom + " творчество: " + creative);
     }
 
     public void moreClever(Ravenclaw all) {

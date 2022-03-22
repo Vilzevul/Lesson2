@@ -23,6 +23,10 @@ public class Hogvards {
         return move;
     }
 
+    public String toString1() {
+        return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: " + getMove() + "\n");
+    }
+
     public void moreMagicPower(Hogvards all) {
         if (this.getMagic() > all.getMagic()) {
             System.out.println(this.getStudent() + " сильнее по силе магии чем " + all.getStudent());
