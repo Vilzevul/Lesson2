@@ -26,7 +26,7 @@ public class Hufflepuff extends Hogvards {
 
     @Override
     public String toString() {
-        return (toString1() + " и как студент Пуффендуй" + "\n" + " трудолюбие: " + diligence + " верность: " + loyality + " честность" + honesty);
+        return (super.toString() +  " и как студент Пуффендуй" + "\n" + " трудолюбие: " + diligence + " верность: " + loyality + " честность" + honesty);
     }
 
     public void moreDiligence(Hufflepuff all) {

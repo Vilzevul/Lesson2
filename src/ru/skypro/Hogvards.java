@@ -23,7 +23,8 @@ public class Hogvards {
         return move;
     }
 
-    public String toString1() {
+    @Override
+    public String toString() {
         return (getStudent() + " обладает следующими качествами: " + "\n" + "Сила магии: " + getMagic() + " трансгрессия: " + getMove() + "\n");
     }
 

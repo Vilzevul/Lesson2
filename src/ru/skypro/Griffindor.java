@@ -27,7 +27,7 @@ public class Griffindor extends Hogvards {
 
     @Override
     public String toString() {
-        return (toString1()+" и как студент Гриффиндор: " + "\n" + " благородство: " + nobility + " честь: " + honour +
+        return (super.toString() + " и как студент Гриффиндор: " + "\n" + " благородство: " + nobility + " честь: " + honour +
                 " храбрость " + bravery);
     }
 

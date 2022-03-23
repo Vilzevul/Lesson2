@@ -35,7 +35,7 @@ public class Ravenclaw extends Hogvards {
 
     @Override
     public String toString() {
-        return (toString1() + " и как студент Когтевран" + "\n" + " ум: " + clever + " мудрость: " + wit + " остроумие: " + wisdom + " творчество: " + creative);
+        return (super.toString() +  " и как студент Когтевран" + "\n" + " ум: " + clever + " мудрость: " + wit + " остроумие: " + wisdom + " творчество: " + creative);
     }
 
     public void moreClever(Ravenclaw all) {
