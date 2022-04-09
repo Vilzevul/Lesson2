@@ -1,79 +1,60 @@
 package ru.skypro;
 
-public class Main<arr> {
-    static Employee[] employee = new Employee[10];
+import java.util.*;
+
+public class Main {
+
 
     public static void main(String[] args) {
-        // write your code here
 
-        employee[0] = new Employee("Иван", "Иванович", "Иванов", 1, 54_200.55);
-        employee[1] = new Employee("Петр", "Иванович", "Петров", 2, 44_985.37);
-        employee[2] = new Employee("Мария", "Семеновна", "Петрова", 3, 47_230.34);
-        employee[3] = new Employee("Семён", "Владимирович", "Смирнов", 4, 68_978.91);
-        employee[4] = new Employee("Екатерина", "Владимировна", "Синица", 4, 67_545.05);
-        employee[5] = new Employee("Владимир", "Витальевич", "Гребнев", 3, 57_496);
-        employee[6] = new Employee("Леонид", "Эдуардович", "Рева", 5, 78_654.66);
-        employee[7] = new Employee("Марина", "Алексеевна", "Савченко", 5, 68_052.78);
-        employee[8] = new Employee("Кристина", "Олеговна", "Вишневская", 2, 46_258.2);
-        employee[9] = new Employee("Алексей", "Александрович", "Васильев", 1, 55_679.43);
-
-
-        System.out.println("Сумма затрат на зарплаты составила " + summa(employee) + " рублей");
-        System.out.println("Максимальная зарплата " + maxSalary(employee) + " рублей");
-        System.out.println("Минимальная зарплата " + minSalary(employee) + " рублей");
-        System.out.println("Средняя зарплата " + midSalary(employee) + " рублей");
-        names(employee);
-        list(employee);
-    }
-
-    static void list(Employee[] employee) {
-        for (Employee a : employee) {
-            System.out.println(a);
-        }
-    }
-
-    static double summa(Employee[] emp) {
-        double sum = 0d;
-        for (Employee num : emp) {
-            sum = sum + num.getSalary();
-        }
-        return sum;
-    }
-
-    static double minSalary(Employee[] emp) {
-        double zp;
-        zp = emp[0].getSalary();
-        for (Employee a : emp) {
-            if (zp > a.getSalary()) {
-                zp = a.getSalary();
+        // Задание1
+        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        List<Integer> num = new ArrayList<>();
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums.get(i) % 2 == 1) {
+                num.add(nums.get(i));
             }
         }
-        return zp;
-    }
-
-    static double maxSalary(Employee[] emp) {
-        double s = 0d;
-        for (Employee a : emp) {
-            if (s < a.getSalary()) {
-                s = a.getSalary();
+        System.out.println("//Задание 1 =  " + num);
+//  Задание
+        Collections.sort(nums);
+        Set<Integer> num2 = new HashSet<>();
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums.get(i) % 2 == 0) {
+                num2.add(nums.get(i));
             }
         }
-        return s;
-    }
+        System.out.println("//Задание 2 =  " + num2);
 
-    static double midSalary(Employee[] emp) {
-        double sum = 0d;
-        double middle = 0d;
-        for (Employee a : emp) {
-            sum = sum + a.getSalary();
-        }
-        middle = sum / emp.length;
-        return middle;
-    }
 
-    static void names(Employee[] emp) {
-        for (Employee a : emp) {
-            System.out.println(a.getLastName() + " " + a.getName() + " " + a.getPatronymic());
+        List<String> str3 = new ArrayList<>(List.of("Код", "должен", "работать",
+                "с", "любой", "последовательностью", "и", "объемом", "списка", "слов", "Код", "должен", "работать",
+                "с", "любой", "последовательностью", "и", "объемом", "списка", "слов", "Код", "должен", "работать",
+                "с", "любой", "последовательностью", "и", "объемом", "списка", "слов"));
+        Set<String> result = new HashSet<>();
+        result.addAll(str3);
+
+        System.out.println("//Задание 3 =  " + result);
+
+
+        //Задание 4
+        List<String> list = new ArrayList<>(List.of("Код", "должен", "работать",
+                "Код", "должен", "работать", "с",
+                "Код", "должен", "работать", "с", "любой"));
+        HashMap<String, Integer> map = new HashMap<>();
+        for (String key : list) {
+            if (map.containsKey(key)) {
+                map.put(key, map.get(key) + 1);
+            } else {
+                map.put(key, 1);
+            }
         }
+        int countKey = 0;
+        for (String listKye : map.keySet()) {
+            if ((map.get(listKye)) > 1) {
+                countKey = countKey + map.get(listKye);
+            }
+        }
+        System.out.println("//Задание 4 =" + countKey);
     }
 }
